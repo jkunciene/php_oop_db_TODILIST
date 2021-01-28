@@ -1,0 +1,10 @@
+#RewriteEngine On RewriteBase /todo_oop_db/ RewriteRule ^.*$ index.php [END];
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /todo_oop_db
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{​​​​REQUEST_FILENAME}​​​​ !-f
+RewriteCond %{​​​​REQUEST_FILENAME}​​​​ !-d
+RewriteRule . /todo_oop_db/index.php [L]
+</IfModule>
